@@ -15,7 +15,8 @@ class LCWSpider(CrawlSpider):
     ]
 
     rules = [
-        Rule(LinkExtractor(allow=('/ssq/details.php\?issue=(\d{7})',)), callback='parse_page')
+        Rule(LinkExtractor(allow=('/ssq/all(\d{4}).php',)), callback='', follow=True),
+        Rule(LinkExtractor(allow=('/ssq/details.php\?issue=(\d{7})',)), callback='parse_page', follow=True)
     ]
 
     @staticmethod
