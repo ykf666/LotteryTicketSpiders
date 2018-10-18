@@ -13,9 +13,9 @@ BOT_NAME = 'LotteryTicket'
 SPIDER_MODULES = ['LotteryTicket.spiders']
 NEWSPIDER_MODULE = 'LotteryTicket.spiders'
 
-ITEM_PIPELINES = ['LotteryTicket.pipelines.LotteryticketPipeline']
-MONGODB_SERVER = "127.0.0.1"
-MONGODB_PORT = 27017
+ITEM_PIPELINES = {'LotteryTicket.pipelines.LotteryticketPipeline':10}
+MONGODB_SERVER = "localhost"
+MONGODB_PORT = 27117
 MONGODB_DB = "lottery_ticker"
 MONGODB_COLLECTION = "shuangseqiu"
 
